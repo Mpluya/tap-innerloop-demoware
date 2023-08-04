@@ -1,5 +1,5 @@
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
-NAMESPACE = os.getenv("NAMESPACE", default='default')
+NAMESPACE = os.getenv("NAMESPACE", default='demo')
 
 k8s_custom_deploy(
     'tanzu-java-web-app',
@@ -17,3 +17,6 @@ k8s_custom_deploy(
 
 k8s_resource('tanzu-java-web-app', port_forwards=["8080:8080"],
             extra_pod_selectors=[{'carto.run/workload-name': 'tanzu-java-web-app', 'app.kubernetes.io/component': 'run'}])
+
+
+allow_k8s_contexts('tap-iterate')
