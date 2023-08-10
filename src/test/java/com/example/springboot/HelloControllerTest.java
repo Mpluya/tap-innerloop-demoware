@@ -21,11 +21,11 @@ class HelloControllerTest {
 
     @Test
     void index() throws Exception {
-        assertEquals("Greetings all, no extra ingress.", controller.index());
+        assertEquals("Greetings all, 1 httpproxy.", controller.index());
 
         mockMvc
             .perform(get("/"))
             .andExpect(status().isOk())
-            .andExpect(content().string("Greetings all, no extra ingress."));
+            .andExpect(content().string("Greetings all, 1 httpproxy."));
     }
 }

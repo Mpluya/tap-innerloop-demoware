@@ -8,7 +8,7 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "Greetings all, no extra ingress.";
+		return "Greetings all, 1 httpproxy.";
 	}
 
 }
