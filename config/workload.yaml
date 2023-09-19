@@ -1,22 +1,29 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: tanzu-java-web-app
-  namespace: demo
+  name: mae-demo
+  namespace: mae
   labels:
     apps.tanzu.vmware.com/workload-type: web
     apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
-    app.kubernetes.io/part-of: tanzu-java-web-app
+    app.kubernetes.io/part-of: mae-demo
 spec:
-  build:
-    env:
-      - name: BP_JVM_VERSION
-        value: "11"
   params:
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
+  - name: scanning_source_policy
+    value: lax-scan-policy
+  - name: scanning_image_policy
+    value: lax-scan-policy
+  - name: testing_pipeline_matching_labels
+    value:
+      apps.tanzu.vmware.com/language: java
+  build:
+    env:
+      - name: BP_JVM_VERSION
+        value: "11"
   source:
     git:
       url: https://github.com/Mpluya/tap-innerloop-demoware

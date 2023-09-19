@@ -1,7 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: tanzu-java-web-app
+  name: mae-demo
+  namespace: mae
   description: Tanzu Java Web App
   tags:
     - app-accelerator
@@ -10,7 +11,7 @@ metadata:
     - web
     - tanzu
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=tanzu-java-web-app'
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=mae-demo'
 spec:
   type: service
   lifecycle: experimental
