@@ -1,6 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
+  annotations:
+    github.com/project-slug: Mpluya/tap-innerloop-demoware
   name: mae-demo
   namespace: mae
   description: Tanzu Java Web App
