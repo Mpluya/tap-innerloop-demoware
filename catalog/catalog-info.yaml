@@ -1,8 +1,6 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  annotations:
-    github.com/project-slug: Mpluya/tap-innerloop-demoware
   name: mae-demo
   namespace: mae
   description: Tanzu Java Web App
@@ -14,6 +12,7 @@ metadata:
     - tanzu
   annotations:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=mae-demo'
+    github.com/project-slug: Mpluya/tap-innerloop-demoware
 spec:
   type: service
   lifecycle: experimental
