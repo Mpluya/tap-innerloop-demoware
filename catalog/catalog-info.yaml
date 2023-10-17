@@ -12,7 +12,7 @@ metadata:
     - tanzu
   annotations:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=mae-demo'
-    github.com/project-slug: Mpluya/tap-innerloop-demoware
+    'github.com/project-slug': 'Mpluya/tap-innerloop-demoware'
 spec:
   type: service
   lifecycle: experimental
