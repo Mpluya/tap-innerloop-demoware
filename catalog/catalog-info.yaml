@@ -13,6 +13,8 @@ metadata:
   annotations:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=mae-demo'
     'github.com/project-slug': 'Mpluya/tap-innerloop-demoware'
+    'snyk.io/org-id': 'value'
+    'snyk.io/target-id': 'value'
 spec:
   type: service
   lifecycle: experimental
